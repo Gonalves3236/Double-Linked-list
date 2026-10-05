@@ -37,7 +37,14 @@ public class App {
         // System.out.println("O index do 20 eh: " + l2.indexOf(12));
         System.out.println("Eh verdade que tem ?  " + l2.contains(5));
         System.out.println("O elemento desejado eh o: " + l2.get(3));
-        System.out.println(l2.remove(50));
+        // System.out.println(l2.remove(50));
+        // System.out.println(l2.removeByIndex(3));
+        // System.out.println("Pós remoção: " + l2);
+
+        int[] j = l2.subList(0,2);
+        for (int i = 0; i < j.length; i++){
+            System.out.println("Numero: " +j[i]);
+        }
     }
     
 }

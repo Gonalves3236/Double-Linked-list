@@ -117,7 +117,7 @@ public class DoubleLinkedListOfInteger {
         }
 
         public boolean remove (Integer element){
-            Node aux = header;
+            Node aux = header.next;
             // Node baux = aux;
             while(aux != trailer){
                 if (aux.element.equals(element)){
@@ -143,9 +143,35 @@ public class DoubleLinkedListOfInteger {
         }
 
         public boolean removeByIndex(Integer index){
+            if (index < 0 || index >= count) 
+                throw new IndexOutOfBoundsException("Índice inválido: " + index + " (tamanho: " + count + ")");
 
-            
-            return false;
+            Node aux = header.next;
+
+            for (int i = 0; i < index; i++){
+                aux = aux.next;
+            }
+            aux.next.prev = aux.prev;
+            aux.prev.next = aux.next;
+            count --;
+            return true;
+        }
+
+        public boolean removeAll(Integer element){
+            boolean remocao = false;
+
+            Node aux = header.next;
+            while (aux != trailer){
+                if (aux.element.equals(element)){
+                    aux.next.prev = aux.prev;
+                    aux.prev.next = aux.next;
+                    count --;
+                    remocao = true;
+                }
+                aux = aux.next;
+            }
+
+            return remocao;
         }
 
 
@@ -159,6 +185,21 @@ public class DoubleLinkedListOfInteger {
         }
         return false;
     }
+
+    public int[] subList (int fromIndex, int toIndex){
+        int[] vetor1 = new int[toIndex - fromIndex];
+        Node aux = header.next;
+        int pos = 0, i = 0;
+        while(aux != trailer){
+            if( (pos >= fromIndex) && (pos < toIndex)){
+                vetor1[i] = aux.element;
+                i++;
+            }
+            aux = aux.next;
+            pos ++;
+        }
+        return vetor1;
+    } 
 
  
     @Override

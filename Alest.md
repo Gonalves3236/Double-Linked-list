@@ -1,12 +1,5 @@
 #### Algoritmos que tem que fazer
 
-* 10. int removeByIndex (int index): remove o elemento da posição index. Ex: 10,
-20, 30, 40 àremoveByIndex(2) à 30; Lista Final à10, 20, 40.
-
-* 11. boolean removeAll(int element): remove todas as ocorrências do elemento
-passado por parâmetro e retorna true se conseguiu remover e falso caso
-contrário.
-
 * 12. int[] subList(int fromIndex, int toIndex): retorna um arranjo com os elementos
 da lista original entre fromIndex (inclusivo) e toIndex (exclusivo). Ex: 10, 20,
 30, 40 à subList(0, 3) à 10, 20, 30
