@@ -1,29 +1,5 @@
 #### Algoritmos que tem que fazer
 
-* 1. boolean contains(int element): retorna true se a lista contém o elemento e
-falso caso contrário. Ex: 4, 8, 12 à contains(8) à true; contains(5) à
-false.
-
-* 4. int indexOf(int element): retorna a posição da primeira ocorrência onde o
-elemento está na lista. Ex: 10, 20, 30, 20 à indexOf(20) à1
-
-* 5. void clear(): limpa a lista
-  
-* 6. void add(int index, int element): insere um elemento na lista na posição
-indicada por index. Ex: 3, 7, 9 à add(1, 5) à 3, 5, 7, 9.
-
-* 7. int get(int index): retorna o elemento da posição indicada por index. Ex: 8,
-12, 20, 25 à get(2) à 20.
-
-* 8. int set(index, e): substitui o valor na posição index pelo elemento passado
-por parâmetro e retorna o valor antigo. Ex: 5, 10, 15, 20 à set(1, 50) à 10;
-Lista Final à 5, 50, 15, 20.
-
-* 9. boolean remove(Integer element): remove a primeira ocorrência do
-elemento passado por parâmetro e retorna true se conseguiu remover e false
-caso contrário. Ex: 10, 20, 30, 20, 40 à remove(20) à true; Lista Final à
-10, 30, 20, 40.
-
 * 10. int removeByIndex (int index): remove o elemento da posição index. Ex: 10,
 20, 30, 40 àremoveByIndex(2) à 30; Lista Final à10, 20, 40.
 
