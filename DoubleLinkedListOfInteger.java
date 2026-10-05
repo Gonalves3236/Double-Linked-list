@@ -173,7 +173,21 @@ public class DoubleLinkedListOfInteger {
 
             return remocao;
         }
+        public boolean removeImpares(){
+            boolean removeu = false;
+            Node aux = header.next;
 
+            while (aux!= trailer){
+                if (aux.element % 2 == 1){
+                    aux.next.prev = aux.prev;
+                    aux.prev.next = aux.next;
+                    removeu = true;
+                    count--;
+                }
+                aux = aux.next;
+            }
+            return removeu;
+        }
 
         public boolean contains(Integer element){
 
@@ -200,6 +214,20 @@ public class DoubleLinkedListOfInteger {
         }
         return vetor1;
     } 
+
+     public int contaOcorrencias(int element){
+        int ocorrencia = 0;
+
+        Node aux = header.next;
+        while (aux != trailer){
+            if(aux.element.equals(element))
+                ocorrencia++;
+            aux = aux.next;
+        }
+        return ocorrencia;
+     }
+
+
 
  
     @Override
